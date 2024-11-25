@@ -1,0 +1,48 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "win-cloudmusic-cppvsdbg",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "E:/Qt/5.15.2/msvc2019_64/bin"
+                }
+            ],
+            "console": "integratedTerminal",
+            "visualizerFile": "${workspaceRoot}/3rdparty/QtMaterial/qt5.natvis.xml",
+            "symbolSearchPath": "otherSearchPath;E:/Qt/5.15.2/msvc2019_64/bin",
+            "sourceFileMap": {
+                "C:/Users/qt/work/qt": "E:/Qt/5.15.2/Src"
+            }
+        },
+        {
+            "name": "mac-cloudmusic-cppdbg",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "additionalSOLibSearchPath": "/Users/ws/Qt/5.15.2/clang_64/lib",
+            "symbolLoadInfo": {
+                "loadAll": true,
+                "exceptionList": ""
+            },
+            "visualizerFile": "${workspaceRoot}/3rdparty/QtMaterial/qt5.natvis.xml",
+            "showDisplayString": true,
+            "sourceFileMap": {
+                "/Users/qt/work/qt": "/Users/ws/Qt/5.15.2/Src"
+            }
+        }
+    ]
+}
