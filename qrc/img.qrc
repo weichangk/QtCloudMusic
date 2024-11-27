@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="/cloudmusic">
+    <file alias="format.ico">../img/format.ico</file>
+  </qresource>
+</RCC>
