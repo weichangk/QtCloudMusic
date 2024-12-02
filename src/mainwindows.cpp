@@ -3,6 +3,7 @@
 
 #include<QVBoxLayout>
 #include<QHBoxLayout>
+#include<QPushButton>
 
 MainWindows::MainWindows(QWidget *parent) :
     QWidget(parent) {
@@ -51,6 +52,21 @@ void MainWindows::createUI() {
     layout1->addWidget(m_pPlayBarWidget);
 
     setLayout(layout1);
+
+    //测试最大化还原布局
+    auto maxminBtn = new QPushButton(m_pTitleBarWidget);
+    maxminBtn->setFixedSize(24, 24);
+    auto titleBarLayout = new QHBoxLayout(m_pTitleBarWidget);
+    titleBarLayout->addStretch();
+    titleBarLayout->addWidget(maxminBtn);
+    connect(maxminBtn, &QPushButton::clicked, [&] {
+        if (isMaximized()) {
+            showNormal();
+        } else {
+            showMaximized();
+        }
+    });
+
 }
 
 void MainWindows::connectSig() {
