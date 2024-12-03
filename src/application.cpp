@@ -1,4 +1,5 @@
 #include "inc/application.h"
+#include "core/font.h"
 
 Application::Application(int argc, char *argv[]) :
     QApplication(argc, argv) {
@@ -16,5 +17,7 @@ void Application::initUi() {
 
 int main(int argc, char *argv[]) {
     Application app(argc, argv);
+    core::Font::setFont(core::Font::ROBOTO_REGULAR);
+    core::Font::setIconFont(core::Font::IconFont);
     return app.exec();
 }
