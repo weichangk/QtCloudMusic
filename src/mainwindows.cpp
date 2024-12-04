@@ -63,23 +63,6 @@ void MainWindows::createUI() {
     QFont iconFont = core::Font::getIconFont(core::Font::IconFontEnum::IconFont);
     maxminBtn->setFont(iconFont);
     maxminBtn->setText(QChar(0xe616));
-    QString maxminBtnStyle = R"(
-        QPushButton#TitleBar_MaxminBtn {
-            border: none;
-            background-color: transparent;
-            color:#9aa0aa; 
-            font-size: 20px;
-        }
-
-        QPushButton#TitleBar_MaxminBtn:hover {
-            color:red;
-        }
-
-        QPushButton#TitleBar_MaxminBtn:pressed {
-            color:blue; 
-        }
-    )";
-    maxminBtn->setStyleSheet(maxminBtnStyle);
 
     auto titleBarLayout = new QHBoxLayout(m_pTitleBarWidget);
     titleBarLayout->addStretch();

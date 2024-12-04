@@ -1,0 +1,14 @@
+QPushButton#TitleBar_MaxminBtn {
+    border: none;
+    background-color: transparent;
+    color:#9aa0aa; 
+    font-size: 20px;
+}
+
+QPushButton#TitleBar_MaxminBtn:hover {
+    color:red;
+}
+
+QPushButton#TitleBar_MaxminBtn:pressed {
+    color:blue; 
+}

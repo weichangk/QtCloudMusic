@@ -1,4 +1,5 @@
 #include "inc/application.h"
+#include "core/theme.h"
 #include "core/font.h"
 
 Application::Application(int argc, char *argv[]) :
@@ -17,6 +18,7 @@ void Application::initUi() {
 
 int main(int argc, char *argv[]) {
     Application app(argc, argv);
+    core::Theme::setStyleToApp(":/qss");
     core::Font::setFont(core::Font::ROBOTO_REGULAR);
     core::Font::setIconFont(core::Font::IconFont);
     return app.exec();
