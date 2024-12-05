@@ -1,6 +1,7 @@
 #include "inc/mainwindows.h"
 #include "helloworld.h"
 #include "core/font.h"
+#include "widget/button.h"
 
 #include<QVBoxLayout>
 #include<QHBoxLayout>
@@ -26,7 +27,7 @@ void MainWindows::createUI() {
 
     m_pTitleBarWidget = new QWidget(this);
     m_pTitleBarWidget->setFixedHeight(72);
-    m_pTitleBarWidget->setStyleSheet("background-color:green");
+    m_pTitleBarWidget->setStyleSheet("background-color:#f7f9fc");
 
     m_pContentWidget = new QWidget(this);
     m_pContentWidget->setStyleSheet("background-color:yellow");
@@ -55,9 +56,8 @@ void MainWindows::createUI() {
     setLayout(layout1);
 
     //测试最大化还原布局
-    auto maxminBtn = new QPushButton(m_pTitleBarWidget);
-    maxminBtn->setObjectName("TitleBar_MaxminBtn");
-    maxminBtn->setFixedSize(24, 24);
+    auto maxminBtn = new widget::VectorButton(m_pTitleBarWidget);
+    maxminBtn->setObjectName("VectorButton_HW28_I20");
 
     //使用矢量图标
     QFont iconFont = core::Font::getIconFont(core::Font::IconFontEnum::IconFont);
