@@ -13,7 +13,7 @@ void TitleBar::createUi() {
     setObjectName("TitleBar");
     setAttribute(Qt::WA_StyledBackground);
     setFixedHeight(72);
-    
+
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setContentsMargins(36, 0, 36, 0);
     layout->setSpacing(0);
@@ -60,7 +60,21 @@ void TitleBar::createUi() {
     m_pUserInfoBtn->setFont(iconFont);
     m_pUserInfoBtn->setText(QChar(0xe631));
 
+    m_pIdentifySongBtn = new widget::VectorButton(this);
+    m_pIdentifySongBtn->setObjectName("VectorButton_HW32_R8_I20_B_Bg");
+    m_pIdentifySongBtn->setFont(iconFont);
+    m_pIdentifySongBtn->setText(QChar(0xe653));
+
+    m_pBackBtn = new widget::VectorButton(this);
+    m_pBackBtn->setObjectName("VectorButton_H32W28_R8_I20_B_Bg");
+    m_pBackBtn->setFont(iconFont);
+    m_pBackBtn->setText(QChar(0xe63d));
+    
     layout->addStretch();
+    layout->addWidget(m_pBackBtn, 0, Qt::AlignVCenter);
+    layout->addSpacing(2);
+    layout->addWidget(m_pIdentifySongBtn, 0, Qt::AlignVCenter);
+    layout->addSpacing(2);
     layout->addWidget(m_pUserInfoBtn, 0, Qt::AlignVCenter);
     layout->addSpacing(2);
     layout->addWidget(m_pMessageBtn, 0, Qt::AlignVCenter);

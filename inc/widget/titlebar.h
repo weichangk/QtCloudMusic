@@ -33,4 +33,7 @@ private:
     widget::VectorButton *m_pSettingBtn = nullptr;
     widget::VectorButton *m_pMessageBtn = nullptr;
     widget::VectorButton *m_pUserInfoBtn = nullptr;
+
+    widget::VectorButton *m_pIdentifySongBtn = nullptr;
+    widget::VectorButton *m_pBackBtn = nullptr;
 };
