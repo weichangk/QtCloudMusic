@@ -1,0 +1,3 @@
+QWidget#TitleBar{
+    background-color: #f7f9fc;
+}

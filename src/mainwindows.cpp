@@ -25,9 +25,7 @@ void MainWindows::createUI() {
     m_pMenuWidget->setFixedWidth(204);
     m_pMenuWidget->setStyleSheet("background-color:blue");
 
-    m_pTitleBarWidget = new QWidget(this);
-    m_pTitleBarWidget->setFixedHeight(72);
-    m_pTitleBarWidget->setStyleSheet("background-color:#f7f9fc");
+    m_pTitleBarWidget = new TitleBar(this);
 
     m_pContentWidget = new QWidget(this);
     m_pContentWidget->setStyleSheet("background-color:yellow");
@@ -54,27 +52,6 @@ void MainWindows::createUI() {
     layout1->addWidget(m_pPlayBarWidget);
 
     setLayout(layout1);
-
-    //测试最大化还原布局
-    auto maxminBtn = new widget::VectorButton(m_pTitleBarWidget);
-    maxminBtn->setObjectName("VectorButton_HW28_I20");
-
-    //使用矢量图标
-    QFont iconFont = core::Font::getIconFont(core::Font::IconFontEnum::IconFont);
-    maxminBtn->setFont(iconFont);
-    maxminBtn->setText(QChar(0xe616));
-
-    auto titleBarLayout = new QHBoxLayout(m_pTitleBarWidget);
-    titleBarLayout->addStretch();
-    titleBarLayout->addWidget(maxminBtn);
-    connect(maxminBtn, &QPushButton::clicked, [&] {
-        if (isMaximized()) {
-            showNormal();
-        } else {
-            showMaximized();
-        }
-    });
-
 }
 
 void MainWindows::connectSig() {

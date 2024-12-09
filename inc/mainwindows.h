@@ -1,4 +1,6 @@
 #pragma once
+#include "widget/titlebar.h"
+
 #include <QWidget>
 
 class MainWindows : public QWidget {
@@ -14,7 +16,7 @@ private:
 
 private:
     QWidget *m_pMenuWidget = nullptr;
-    QWidget *m_pTitleBarWidget = nullptr;
+    TitleBar *m_pTitleBarWidget = nullptr;
     QWidget *m_pContentWidget = nullptr;
     QWidget *m_pPlayBarWidget = nullptr;
 };

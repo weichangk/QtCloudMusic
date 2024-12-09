@@ -14,6 +14,7 @@ add_subdirectory(${CMAKE_SOURCE_DIR}/3rdparty/QtCloudMusicMaterial)
 
 # 添加头文件搜索目录
 MY_ADD_PROJECT_INCLUDE_FUNC(
+    ${CMAKE_SOURCE_DIR}/inc
     ${CMAKE_SOURCE_DIR}/3rdparty/QtCloudMusicMaterial/inc
 )
 
