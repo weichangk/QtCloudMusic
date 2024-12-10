@@ -1,5 +1,6 @@
 #pragma once
 #include "widget/button.h"
+#include "widget/lineedit.h"
 
 #include <QWidget>
 
@@ -36,4 +37,6 @@ private:
 
     widget::VectorButton *m_pIdentifySongBtn = nullptr;
     widget::VectorButton *m_pBackBtn = nullptr;
+    
+    widget::SearchLineEdit *m_pSearchLineEdit = nullptr;
 };

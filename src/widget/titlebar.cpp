@@ -65,16 +65,23 @@ void TitleBar::createUi() {
     m_pIdentifySongBtn->setFont(iconFont);
     m_pIdentifySongBtn->setText(QChar(0xe653));
 
+    m_pSearchLineEdit = new widget::SearchLineEdit(this);
+    m_pSearchLineEdit->setFixedSize(260, 32);
+    m_pSearchLineEdit->setPlaceholderText("Beyond");
+
     m_pBackBtn = new widget::VectorButton(this);
     m_pBackBtn->setObjectName("VectorButton_H32W28_R8_I20_B_Bg");
     m_pBackBtn->setFont(iconFont);
     m_pBackBtn->setText(QChar(0xe63d));
     
-    layout->addStretch();
     layout->addWidget(m_pBackBtn, 0, Qt::AlignVCenter);
-    layout->addSpacing(2);
+    layout->addSpacing(8);
+    layout->addWidget(m_pSearchLineEdit, 0, Qt::AlignVCenter);
+    layout->addSpacing(8);
     layout->addWidget(m_pIdentifySongBtn, 0, Qt::AlignVCenter);
-    layout->addSpacing(2);
+
+    layout->addStretch();
+
     layout->addWidget(m_pUserInfoBtn, 0, Qt::AlignVCenter);
     layout->addSpacing(2);
     layout->addWidget(m_pMessageBtn, 0, Qt::AlignVCenter);

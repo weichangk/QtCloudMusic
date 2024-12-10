@@ -15,6 +15,7 @@ MainWindows::MainWindows(QWidget *parent) :
 
 void MainWindows::createUI() {
     setMinimumSize(1056, 752);
+    setFixedSize(1056, 752);
     setWindowFlags(Qt::FramelessWindowHint);
 
     m_pPlayBarWidget = new QWidget(this);
