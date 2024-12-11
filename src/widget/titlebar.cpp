@@ -2,6 +2,7 @@
 #include "core/font.h"
 
 #include <QHBoxLayout>
+#include <QApplication>
 
 TitleBar::TitleBar(QWidget *parent) :
     QWidget(parent) {
@@ -60,6 +61,12 @@ void TitleBar::createUi() {
     m_pUserInfoBtn->setFont(iconFont);
     m_pUserInfoBtn->setText(QChar(0xe631));
 
+    m_pDiscountLabel = new widget::DiscountLabel(this);
+    m_pDiscountLabel->setFixedSize(80, 16);
+    QFont discountFont = QApplication::font();
+    discountFont.setPixelSize(11);
+    m_pDiscountLabel->setText("限时6.4折", discountFont, QColor("#ecd4cf"), 20, 40);
+
     m_pIdentifySongBtn = new widget::VectorButton(this);
     m_pIdentifySongBtn->setObjectName("VectorButton_HW32_R8_I20_B_Bg");
     m_pIdentifySongBtn->setFont(iconFont);
@@ -82,6 +89,8 @@ void TitleBar::createUi() {
 
     layout->addStretch();
 
+    layout->addWidget(m_pDiscountLabel, 0, Qt::AlignVCenter);
+    layout->addSpacing(2);
     layout->addWidget(m_pUserInfoBtn, 0, Qt::AlignVCenter);
     layout->addSpacing(2);
     layout->addWidget(m_pMessageBtn, 0, Qt::AlignVCenter);
