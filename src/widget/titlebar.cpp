@@ -61,6 +61,15 @@ void TitleBar::createUi() {
     m_pUserInfoBtn->setFont(iconFont);
     m_pUserInfoBtn->setText(QChar(0xe631));
 
+    m_pUserNameLabel = new QLabel(this);
+    m_pUserNameLabel->setObjectName("TitleBar_m_pUserNameLabel");
+    m_pUserNameLabel->setText("隆里电丝");
+
+    m_pAvatar = new widget::Avatar(this);
+    m_pAvatar->setFixedSize(30, 30);
+    m_pAvatar->setBorderRadius(15);
+    m_pAvatar->setAvatar(":/cloudmusic/avatar");
+
     m_pDiscountLabel = new widget::DiscountLabel(this);
     m_pDiscountLabel->setFixedSize(80, 16);
     QFont discountFont = QApplication::font();
@@ -80,7 +89,7 @@ void TitleBar::createUi() {
     m_pBackBtn->setObjectName("VectorButton_H32W28_R8_I20_B_Bg");
     m_pBackBtn->setFont(iconFont);
     m_pBackBtn->setText(QChar(0xe63d));
-    
+
     layout->addWidget(m_pBackBtn, 0, Qt::AlignVCenter);
     layout->addSpacing(8);
     layout->addWidget(m_pSearchLineEdit, 0, Qt::AlignVCenter);
@@ -89,6 +98,10 @@ void TitleBar::createUi() {
 
     layout->addStretch();
 
+    layout->addWidget(m_pAvatar, 0, Qt::AlignVCenter);
+    layout->addSpacing(4);
+    layout->addWidget(m_pUserNameLabel, 0, Qt::AlignVCenter);
+    layout->addSpacing(4);
     layout->addWidget(m_pDiscountLabel, 0, Qt::AlignVCenter);
     layout->addSpacing(2);
     layout->addWidget(m_pUserInfoBtn, 0, Qt::AlignVCenter);
@@ -98,7 +111,11 @@ void TitleBar::createUi() {
     layout->addWidget(m_pSettingBtn, 0, Qt::AlignVCenter);
     layout->addSpacing(2);
     layout->addWidget(m_pThemeBtn, 0, Qt::AlignVCenter);
-    layout->addSpacing(2);
+
+    layout->addSpacing(6);
+    layout->addWidget(createDividingLine(), 0, Qt::AlignVCenter);
+    layout->addSpacing(6);
+
     layout->addWidget(m_pShowPlayBarBtn, 0, Qt::AlignVCenter);
     layout->addSpacing(2);
     layout->addWidget(m_pMinimizeBtn, 0, Qt::AlignVCenter);
@@ -117,6 +134,14 @@ void TitleBar::connectSig() {
     connect(m_pSettingBtn, &widget::VectorButton::clicked, this, &TitleBar::slotSettingBtnClicked);
     connect(m_pMessageBtn, &widget::VectorButton::clicked, this, &TitleBar::slotMessageBtnClicked);
     connect(m_pUserInfoBtn, &widget::VectorButton::clicked, this, &TitleBar::slotUserInfoBtnClicked);
+}
+
+QWidget *TitleBar::createDividingLine() {
+    QWidget *dividingLine = new QWidget(this);
+    dividingLine->setAttribute(Qt::WA_StyledBackground);
+    dividingLine->setObjectName("TitleBar_DividingLine");
+    dividingLine->setFixedSize(1, 16);
+    return dividingLine;
 }
 
 void TitleBar::slotCloseBtnClicked() {

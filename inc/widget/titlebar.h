@@ -2,6 +2,7 @@
 #include "widget/button.h"
 #include "widget/lineedit.h"
 #include "widget/label.h"
+#include "widget/avatar.h"
 
 #include <QWidget>
 
@@ -15,6 +16,7 @@ public:
 private:
     void createUi();
     void connectSig();
+    QWidget *createDividingLine();
 
 private slots:
     void slotCloseBtnClicked();
@@ -38,8 +40,11 @@ private:
 
     widget::DiscountLabel *m_pDiscountLabel = nullptr;
 
+    QLabel *m_pUserNameLabel = nullptr;
+    widget::Avatar *m_pAvatar = nullptr;
+
     widget::VectorButton *m_pIdentifySongBtn = nullptr;
     widget::VectorButton *m_pBackBtn = nullptr;
-    
+
     widget::SearchLineEdit *m_pSearchLineEdit = nullptr;
 };

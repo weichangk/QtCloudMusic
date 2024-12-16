@@ -1,3 +1,20 @@
 QWidget#TitleBar{
     background-color: #f7f9fc;
 }
+
+#TitleBar_m_pUserNameLabel {
+    color:#9aa0aa; 
+    font-size: 11px;
+}
+
+#TitleBar_m_pUserNameLabel:hover {
+    color:#5b6474; 
+}
+
+#TitleBar_m_pUserNameLabel:pressed {
+    color:#5b6474; 
+}
+
+#TitleBar_DividingLine {
+    background-color:#e2e5e9; 
+}
