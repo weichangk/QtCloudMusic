@@ -22,9 +22,7 @@ void MainWindows::createUI() {
     m_pPlayBarWidget->setFixedHeight(80);
     m_pPlayBarWidget->setStyleSheet("background-color:red");
 
-    m_pMenuWidget = new QWidget(this);
-    m_pMenuWidget->setFixedWidth(204);
-    m_pMenuWidget->setStyleSheet("background-color:blue");
+    m_pNavBarWidget = new NavBar(this);
 
     m_pTitleBarWidget = new TitleBar(this);
 
@@ -46,7 +44,7 @@ void MainWindows::createUI() {
     layout3->addWidget(m_pTitleBarWidget);
     layout3->addWidget(m_pContentWidget, 1);
 
-    layout2->addWidget(m_pMenuWidget);
+    layout2->addWidget(m_pNavBarWidget);
     layout2->addLayout(layout3, 1);
 
     layout1->addLayout(layout2, 1);

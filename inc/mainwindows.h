@@ -1,5 +1,6 @@
 #pragma once
 #include "widget/titlebar.h"
+#include "widget/navbar.h"
 
 #include <QWidget>
 
@@ -15,8 +16,8 @@ private:
     void connectSig();
 
 private:
-    QWidget *m_pMenuWidget = nullptr;
     TitleBar *m_pTitleBarWidget = nullptr;
+    NavBar *m_pNavBarWidget = nullptr;
     QWidget *m_pContentWidget = nullptr;
     QWidget *m_pPlayBarWidget = nullptr;
 };

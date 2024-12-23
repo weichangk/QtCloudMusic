@@ -3,5 +3,6 @@
     <file>../qss/mainwindows.qss</file>
     <file>../qss/qsstest.qss</file>
     <file>../qss/titlebar.qss</file>
+    <file>../qss/navbar.qss</file>
   </qresource>
 </RCC>
