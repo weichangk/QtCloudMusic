@@ -1,4 +1,5 @@
 #pragma once
+#include "widget/button.h"
 
 #include <QWidget>
 
@@ -13,4 +14,7 @@ public:
 private:
     void createUi();
     void connectSig();
+
+private:
+    widget::HorIconTextVectorButton *m_pProjectLogo = nullptr;
 };

@@ -1,3 +1,55 @@
 QWidget#NavBar{
     background-color: #f0f3f6;
 }
+
+
+/* ProjectLogo */
+#ProjectLogo {
+    border: none;
+    background-color: transparent;
+}
+
+#ProjectLogo_Icon[widget-state='normal'] {
+    border: none;
+    background-color: transparent;
+    color:#fc3c55;
+    font-size: 32px;
+}
+
+#ProjectLogo_Icon[widget-state='hover'] {
+    border: none;
+    background-color: transparent;
+    color:#fc3c55;
+    font-size: 32px;
+}
+
+#ProjectLogo_Icon[widget-state='pressed'] {
+    border: none;
+    background-color: transparent;
+    color:#fc3c55;
+    font-size: 32px;
+}
+
+#ProjectLogo_Text[widget-state='normal'] {
+    border: none;
+    background-color: transparent;
+    color:#283248; 
+    font-size: 19px;
+    font-weight: 600;
+}
+
+#ProjectLogo_Text[widget-state='hover'] {
+    border: none;
+    background-color: transparent;
+    color:#283248; 
+    font-size: 19px;
+    font-weight: 600;
+}
+
+#ProjectLogo_Text[widget-state='pressed'] {
+    border: none;
+    background-color: transparent;
+    color:#283248; 
+    font-size: 19px;
+    font-weight: 600;
+}
