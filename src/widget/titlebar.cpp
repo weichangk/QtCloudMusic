@@ -19,7 +19,7 @@ void TitleBar::createUi() {
     layout->setContentsMargins(36, 0, 36, 0);
     layout->setSpacing(0);
 
-    QFont iconFont = core::Font::getIconFont(core::Font::IconFontEnum::IconFont);
+    QFont iconFont = core::Font::getIconFont(":/font/iconfont.ttf");
 
     m_pCloseBtn = new widget::VectorButton(this);
     m_pCloseBtn->setObjectName("VectorButton_HW28_I20");

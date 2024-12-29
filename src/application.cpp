@@ -20,6 +20,6 @@ int main(int argc, char *argv[]) {
     Application app(argc, argv);
     core::Theme::setStyleToApp(":/qss");
     core::Font::setFont(core::Font::ROBOTO_REGULAR);
-    core::Font::setIconFont(core::Font::IconFont);
+    core::Font::setIconFont(":/font/iconfont.ttf");
     return app.exec();
 }

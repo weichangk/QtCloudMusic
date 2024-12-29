@@ -37,7 +37,7 @@ void NavBar::createUi() {
     setAttribute(Qt::WA_StyledBackground);
     setFixedWidth(204);
 
-    QFont iconFont = core::Font::getIconFont(core::Font::IconFontEnum::IconFont);
+    QFont iconFont = core::Font::getIconFont(":/font/iconfont.ttf");
 
     m_pProjectLogo = new widget::HorIconTextVectorButton(this);
     m_pProjectLogo->setObjectName("ProjectLogo");
@@ -81,7 +81,7 @@ QVBoxLayout *NavBar::createNavBtns() {
     navMap[ENavBtns::NavBtnLocalmusic] = {QChar(0xe77a), "本地音乐"};
     navMap[ENavBtns::NavBtnNetworkdisk] = {QChar(0xe7a9), "我的音乐网盘"};
     QMap<int, SNavIconName>::Iterator iter;
-    QFont iconFont = core::Font::getIconFont(core::Font::IconFontEnum::IconFont);
+    QFont iconFont = core::Font::getIconFont(":/font/iconfont.ttf");
     QButtonGroup *navBtnGroup = new QButtonGroup(this);
     navBtnGroup->setExclusive(true);
     for (iter = navMap.begin(); iter != navMap.end(); ++iter) {
